@@ -32,6 +32,24 @@
     <title>Document</title>
 </head>
 <body>
+<h1>Testo originale</h1>
+    <!-- print original text with var_dump  -->
+    <p><?= var_dump($text)?> </p>
+    <br>
+
+    <form action="" method="get">
+        <label for="word">Inserire una parola del testo</label>
+        <!-- input text -->
+        <input type="text" name="word">
+        <button>Invia</button>
+    </form>
+    <br>
+
+    <h1>Testo corretto</h1>
+    <!-- print replaced text -->
+    <p> <?= $replaced_text?> </p>
+    <!-- print length with strlen -->
+    <p> Lunghezza testo: <?= strlen($replaced_text);?> </p>
     
 </body>
 </html>
