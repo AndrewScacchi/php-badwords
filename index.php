@@ -32,10 +32,14 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Testo originale</h1>
-    <!-- print original text with var_dump  -->
-    <p><?= var_dump($text)?> </p>
-    <br>
+    <h1>Ministero della verità</h1>
+    <div>
+        <h2>Testo originale</h2>
+        <!-- print original text -->
+        <p><?= $text?> </p>
+        <!-- print original text length -->
+        <p> Lunghezza testo: <?= strlen($text);?> </p>
+    </div>
 
     <form action="" method="get">
         <label for="word">Inserire una parola del testo</label>
@@ -43,13 +47,15 @@
         <input type="text" name="word">
         <button>Invia</button>
     </form>
-    <br>
-
-    <h1>Testo corretto</h1>
-    <!-- print replaced text -->
-    <p> <?= $replaced_text?> </p>
-    <!-- print length with strlen -->
-    <p> Lunghezza testo: <?= strlen($replaced_text);?> </p>
+    
+    <div>
+        <h2>Testo censurato</h2>
+        <!-- print replaced text -->
+        <p> <?= $replaced_text?> </p>
+        <!-- print length with strlen -->
+        <p> Lunghezza testo: <?= strlen($replaced_text);?> </p>
+    </div>
+    
     
 </body>
 </html>
